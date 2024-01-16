@@ -1,7 +1,1 @@
-Title: Cringia Hub
 
-Idea : The game idea is very simple. It basically contains the famous instagram reel and famous videos which are very cringe. And there will be voting system in it on the basis of the votes there will be leaderboard which will show the first, second, and third positions. Reels and videos will be added time to time and hence the score board will also change accordingly. 
-
-Features:1.There will be a login and signup page
-	 2.There will a leaderboard which will show the most cringiest 	    	   reel.
-	 3. People can vote in reels to take it on leaderboard.
