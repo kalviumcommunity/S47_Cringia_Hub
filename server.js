@@ -4,7 +4,7 @@ const app = express();
 
 //routes
 
-app.get('/ping', (req, res) => {
+app.get('/', (req, res) => {
     res.send("Hello devoob");
 })
 
