@@ -1,14 +1,38 @@
-const express = require("express");
+const express = require('express');
+
+const { startDatabase, stopDatabase, isConnected } = require('./user');
 const app = express();
 
+const port = process.env.PUBLIC_PORT ?? 8000;
 
-//routes
+app.get('/', (req, res) => {
+  res.json({
+    message: 'API running Successfully',
+    database: isConnected() ? 'connected' : 'disconnected'
+  })
+});
 
-app.get('/ping', (req, res) => {
-    res.send("Hello devoob");
-})
 
-app.listen(4000, ()=> {
-    console.log("Listening on port 4000");
-})
+process.on('SIGINT', async () => {
+  await stopDatabase();
+  process.exit(0);
+});
 
+process.on('SIGTERM', async () => {
+  await stopDatabase();
+  process.exit(0);
+});
+
+if (require.main === module) {
+  app.listen(port, async () => {
+    await startDatabase();
+
+    console.log(`🚀 server running on PORT: ${port}`);
+  });
+}
+
+
+
+
+
+module.exports = app;
