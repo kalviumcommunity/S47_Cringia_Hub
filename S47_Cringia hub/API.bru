@@ -1,0 +1,17 @@
+meta {
+  name: API
+  type: http
+  seq: 1
+}
+
+delete {
+  url: http://localhost:3000/ping/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "janhavi"
+  }
+}
