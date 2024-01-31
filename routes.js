@@ -5,7 +5,7 @@ app.use(express.json());
 
 const postdata = [
     { name: "Devraj Patil", squad: "S47", project: "Cringia Hub" },
-    { name: "Shaksham", squad: "S44", project: "Cringia" },
+    { name: "Saksham", squad: "S44", project: "Cringia" },
     { name: "nayan", squad: "S44", project: "Cringia" },
 ];
 
